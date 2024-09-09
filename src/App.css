@@ -1,0 +1,518 @@
+body {
+  perspective: 2000px;
+  perspective-origin: center;
+}
+
+.Ring-Ani {
+  width: 1px;
+  height: 1px;
+  animation: Ring-Animation 1s linear forwards;
+}
+
+@keyframes Ring-Animation {
+  from {
+    width: 1px;
+    height: 1px;
+  }
+
+  to {
+    width: 60vw;
+    height: 30vw;
+  }
+}
+
+@keyframes Ring-Animation-sm {
+  from {
+    width: 1px;
+    height: 1px;
+  }
+
+  to {
+    width: 100vw;
+    height: 50vw;
+  }
+}
+
+.position-ring {
+  width: 60vw;
+  height: 30vw;
+  animation: Ring-left 0.5s linear forwards;
+}
+
+@keyframes Ring-left {
+  from {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  to {
+    left: 3%;
+    transform: translate(0, -50%);
+  }
+}
+
+.position-ring2 {
+  left: 50%;
+  transform: translateX(-50%);
+  animation: Ring-left2 0.5s linear forwards;
+}
+
+@keyframes Ring-left2 {
+  from {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  to {
+    left: 0;
+    transform: translateX(0);
+  }
+}
+
+.RingCloseAni {
+  width: 60vw;
+  height: 30vw;
+  left: 3%;
+  animation: RingClose 1s linear 1s forwards;
+}
+
+@keyframes RingClose {
+  from {
+    width: 60vw;
+    height: 30vw;
+  }
+
+  to {
+    width: 0;
+    height: 0;
+  }
+}
+
+@keyframes RingClose-sm {
+  from {
+    width: 100vw;
+    height: 50vw;
+  }
+
+  to {
+    width: 0;
+    height: 0;
+  }
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  background: linear-gradient(to right, var(--Ring-Gradient));
+  z-index: 10;
+  border-radius: inherit;
+}
+
+.ShoeDisplayingAni {
+  animation: DisplayingAni 1s linear forwards;
+  filter: drop-shadow(10px 10px 8px black);
+}
+
+@keyframes DisplayingAni {
+  from {
+    top: 50vh;
+    left: 0vw;
+    transform: rotateZ(0);
+  }
+
+  to {
+    top: 10%;
+    left: -15%;
+    transform: rotateZ(-28deg);
+  }
+}
+
+.left-3per {
+  left: 3%;
+  transform: translateX(-50%);
+}
+
+.shoe-width {
+  width: 35vw;
+}
+
+.InfoBarPosition {
+  height: 25vh;
+}
+
+.perallelogram {
+  clip-path: polygon(30% 0, 100% 0%, 70% 100%, 0% 100%);
+  background: radial-gradient(circle, white 0%, white 20%, var(--Bg-Gradient) 60%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.cards-position {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 60vw;
+  height: 30vw;
+  width: 15vw;
+}
+
+.shoemini {
+  filter: drop-shadow(4px 4px 8px black);
+}
+
+.pics {
+  margin-left: 3vw;
+}
+
+.middle-pic {
+  top: 5vw;
+  left: -20%;
+}
+
+.bottom-pic {
+  top: 18vw;
+  left: -38%;
+  transform: rotate(15deg);
+}
+
+.top-card {
+  margin-left: 4vw;
+}
+
+.bottom-card {
+  margin-left: -4vw;
+}
+
+.semi-circle {
+  height: 60vh;
+  width: 60vh;
+  right: -60vh;
+  animation: shoe-ring 1s ease-out forwards;
+}
+
+@keyframes shoe-ring {
+  from {
+    right: -60vh;
+  }
+
+  to {
+    right: -28vh;
+  }
+
+}
+
+.shoe {
+  left: var(--left);
+  top: var(--top);
+  transform: rotate(var(--rotate));
+}
+
+.text-bg {
+  font: 900;
+  font-size: 25vw;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: transparent;
+  text-shadow: 4px 4px 7px #090e1a, 0 0 #000;
+}
+
+.InfoBarClose {
+  animation: InfoBarClose 0.5s linear forwards;
+}
+
+@keyframes InfoBarClose {
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: 0;
+  }
+}
+
+.InfoBarAni {
+  animation: InfoBarAni 0.5s linear forwards;
+}
+
+@keyframes InfoBarAni {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.gradient-gray {
+  background: linear-gradient(to top, rgb(30, 30, 30), rgb(203, 203, 203), rgb(30, 30, 30));
+}
+
+.small-circle {
+  width: 12%;
+  height: 12%;
+  box-shadow: 0px 0px 10px blue;
+}
+
+.MiniCardsAni {
+  animation: MiniCardsAni 0.7s linear forwards;
+}
+
+@keyframes MiniCardsAni {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: auto;
+  }
+
+}
+
+.ShoeGoingAni {
+  animation: GoingAni 0.7s linear forwards;
+}
+
+@keyframes GoingAni {
+  from {
+    top: 10%;
+    left: -15%;
+    transform: rotateZ(-28deg);
+  }
+
+  to {
+    top: -100%;
+    left: -30%;
+    transform: rotateZ(-30deg);
+  }
+}
+
+.Ring-Rotate {
+  animation: rotate 1s linear 0.5s forwards;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(var(--Ring-Rotate-From));
+  }
+
+  to {
+    transform: rotate(var(--Ring-Rotate-To));
+  }
+
+}
+
+.page-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  perspective: 1500px;
+}
+
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.page-enter {
+  transform: rotateY(90deg) translateX(50vw) translateZ(-50vw);
+}
+
+.page-enter-active {
+  transform: rotateY(0deg) translateX(0) translateZ(0);
+}
+
+.page-exit {
+  transform: rotateY(0) translateX(0) translateZ(0);
+}
+
+.page-exit-active {
+  transform: rotateY(-90deg) translateX(-50vw) translateZ(-50vw);
+}
+
+.store-item {
+  box-shadow: 4px 4px 10px black;
+}
+
+.blur-bg {
+  top: -100%;
+  transition: background-color 0.3s linear;
+
+}
+
+.store-item:hover .blur-bg {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.store-item-des {
+  width: 140%;
+  height: fit-content;
+  top: -100%;
+  left: -20%;
+  box-shadow: 4px 4px 10px black;
+  transition: top 0.5s ease-in 0.3s;
+}
+
+.store-item:hover .store-item-des {
+  top: -160%;
+}
+
+.Item {
+  opacity: 0;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.Item.ShowStoreItem {
+  animation: ShowItem 0.5s ease-out forwards;
+}
+
+.Items.Visible {
+  opacity: 1;
+}
+
+@keyframes ShowItem {
+  from {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.per-slide {
+  width: 200vw;
+  transition: transform 0.5s ease-in;
+}
+
+.GlanceTyping {
+  transition: width 0.1s linear;
+}
+
+.MenuBar {
+  height: calc(100vh - 40px);
+}
+
+.MenuBarShow {
+  opacity: 0;
+  left: 100vw;
+  animation: MenuBarShow 0.7s linear forwards;
+}
+
+@keyframes MenuBarShow {
+  from {
+    left: 100vw;
+    opacity: 0;
+  }
+
+  to {
+    left: 50vw;
+    opacity: 1;
+  }
+
+}
+
+.MenuBarHide {
+  opacity: 1;
+  left: 50vw;
+  animation: MenuBarHide 0.7s linear forwards;
+}
+
+@keyframes MenuBarHide {
+  from {
+    left: 50vw;
+    opacity: 1;
+  }
+
+  to {
+    left: 100vw;
+    opacity: 0;
+  }
+}
+
+.SlideShowBtn {
+  top: 80%;
+}
+
+@keyframes shoe-ring-sm {
+  from {
+    bottom: -180vw;
+  }
+
+  to {
+    bottom: -75vw;
+  }
+}
+
+@media not all and (min-width: 640px) {
+  .cards-position {
+    top: 60%;
+    left: 25%;
+    width: 30vw;
+    height: 70vw;
+  }
+
+  .semi-circle {
+    height: 80vw;
+    width: 80vw;
+    right: 10vw;
+    bottom: -80vw;
+    animation: none;
+    animation: shoe-ring-sm 1s ease-out forwards;
+  }
+
+  .Ring-Ani {
+    animation: Ring-Animation-sm 1s linear forwards;
+  }
+
+  .position-ring {
+    width: 100vw;
+    height: 50vw;
+    animation: Ring-left 0.5s linear forwards;
+  }
+
+  .shoe-width {
+    width: 60vw;
+  }
+
+  .top-card {
+    margin-left: 7vw;
+  }
+
+  .bottom-card {
+    margin-left: -7vw;
+  }
+
+  .middle-pic {
+    top: 14vw;
+    left: -20%;
+  }
+
+  .bottom-pic {
+    top: 45vw;
+    left: -30%;
+    transform: rotate(15deg);
+  }
+
+  .SlideShowBtn {
+    top: 70%;
+  }
+
+  .RingCloseAni {
+    width: 100vw;
+    height: 50vw;
+    left: 3%;
+    animation: RingClose-sm 1s linear 1s forwards;
+  }
+
+}
